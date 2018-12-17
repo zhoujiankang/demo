@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="renderer" content="webkit"> <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 避免IE使用兼容模式 -->
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="browsermode" content="application">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="keywords" content="小兔充充,站长招募令，活动"> <!-- 关键词 -->
+    <meta name="description" content="小兔充充站长招募令"> <!-- 网站内容描述 -->
+    <title>站长招募令</title>
+    <link href="css/picker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/activity.min.css"/>
+    <link rel="stylesheet" type="text/css" href="layer_mobile/need/layer.css"/>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div class="activityCon">
+        <!-- 页面1 -->
+        <div class="activityImg_1">
+            <img src="img/recruit_1.png" alt="" class="activityImg">
+        </div>
+        <!-- 页面2 -->
+        <div class="activityImg_2">
+            <img src="img/recruit_2.png" alt="" class="activityImg">
+            <div class="joinGo">
+                <a href="#info" class="go animated shake"></a>
+            </div>
+        </div>
+        <!-- 页面3 -->
+        <div class="activityImg_3">
+            <img src="img/recruit_3.png" alt="" class="activityImg">
+        </div>
+        <!-- 页面4 -->
+        <div class="activityImg_4">
+            <img src="img/recruit_4.png" alt="" class="activityImg">
+        </div>
+        <!-- 页面5 -->
+        <div id="info"></div>
+        <div class="activityFot">
+            <div class="item dis_flex">
+            	<label for="name" class="labelText">姓名</label>
+            	<input type="text" id="name" value="" placeholder="请输入您的姓名" class='ipt flex_1'/>
+            </div>
+            <div class="item dis_flex">
+            	<label for="sex" class="labelText">性别</label>
+                <input type="text" id="sex" value="男" readonly placeholder="请选择您的性别" class='ipt flex_1'/>
+                <i class="dropdown"></i>
+            </div>
+            <div class="item dis_flex">
+            	<label for="tel" class="labelText">电话</label>
+            	<input type="tel" id="tel" value="" placeholder="请选择您的电话" maxlength="11" class='ipt flex_1'/>
+            </div>
+            <div class="item dis_flex">
+            	<label for="level" class="labelText">档位</label>
+                <input type="tel" id="level" value="" readonly placeholder="请选择认领档位" class='ipt flex_1'/>
+                <i class="dropdown"></i>
+            </div>
+            <div class="item dis_flex">
+            	<label for="city" class="labelText">城市</label>
+                <input type="tel" id="city" value="" readonly placeholder="请选择您所在的城市" class='ipt flex_1'/>
+                <i class="dropdown"></i>
+            </div>
+            <!-- 提交 -->
+            <button class="submit ripple">提交</button>
+            <div class="conect">如有任何疑问欢迎拨打全国服务热线</div>
+            <a href="tel:400-181-0939" class="call">400-181-0939</a>
+            <!-- 二维码 -->
+            <div class="foot">
+                <img src="img/code.png" alt="" class="code">
+                <div class="more">关注公众号  了解更多</div>
+                <div class='tip'>此招募最终解释权归小兔充充科技所有</div>
+            </div>
+        </div>
+        <!-- 立即加入 -->
+        <div class="joinUs">
+            <a class="joinBtn" href="#info"></a>
+        </div>
+        <!-- 分享 -->
+        <div class="shareTip">
+            <img src="img/share.png" alt="" class="shareGuid">
+        </div>
+	</div>
+</body>
+<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="js/zepto.min.js" ></script>
+<script type="text/javascript" src="layer_mobile/layer.js" ></script>
+<!-- <script type="text/javascript" src="js/city.min.js"></script> -->
+<script type="text/javascript" src="js/newCity.js"></script>
+<script src="js/picker.min.js"></script>
+<script type="text/javascript" src="js/index.min.js" ></script>
+<script>
+    $(function(){
+        (function(doc,win){
+			var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function(){
+				var clientWidth = docEl.clientWidth;
+				if(!clientWidth) return;
+				if(clientWidth>=750){
+					docEl.style.fontSize = '100px';
+				}
+				else{
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				}
+			};
+    		recalc();
+			if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	        // doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document,window);
+    })
+</script>
+<script>
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    console.log('isIOS',!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) 
+    alert('是否是Android：'+isAndroid);
+    alert('是否是iOS：'+isiOS);
+</script>
+
+</html>

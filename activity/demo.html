@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    1211
+</body>
+<script>
+    let arr = "[1,2,1,2]"
+    console.log(JSON.parse(arr))
+    // async function demo01() {
+    //     let obj = {
+    //         name:'zjk',
+    //         age:24,
+    //         sex:'男'
+    //     };
+    //     return obj;
+    // }
+    // demo01().then(val => {
+    //     console.log(val);// 123
+    // });
+
+
+    // function teacher(name){
+    //     this.name = name;
+    // };
+    // teacher.prototype.sayName = function(){
+    //     console.log("name is "+this.name);
+    // };
+    // var teacher1 = new teacher("xiaoming");
+    // teacher1.sayName();
+    //
+    // function student(name){
+    //     this.name = name;
+    // };
+    // student.prototype = new teacher();
+    // var student1 = new student("xiaolan");
+    // student1.sayName();
+
+
+    // function teacher(name,age){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sayhi = function(){
+    //         console.log('name:' + name + ", age:" + age);
+    //     }
+    // }
+    // function student(){
+    //     var args = arguments;
+    //     teacher.call(this,args[0],args[1]);
+    //     // teacher.apply(this,arguments);
+    // }
+    // var teacher1 = new teacher('xiaoming',23);
+    // teacher1.sayhi();
+    //
+    // var student1 = new student('xiaolan',12);
+    // student1.sayhi();
+
+    // function teacher(name,age){
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // teacher.prototype.sayName = function(){
+    //     console.log('name:'+this.name);
+    // }
+    // teacher.prototype.sayAge = function(){
+    //     console.log('age:'+this.age);
+    // }
+    //
+    // function student(){
+    //     var args = arguments;
+    //     teacher.call(this,args[0],args[1]);
+    // }
+    // student.prototype = new teacher();
+    //
+    // var student1 = new student('xiaolin',23);
+    // student1.sayName();
+    // student1.sayAge();
+    // name:xiaolin
+    // age:23
+
+    // function Person(name,age){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.show = function(){
+    //         console.log(this.name+", "+this.age);
+    //     }
+    // }
+    //
+    // function Student(name,age){
+    //     this.student = Person; //将Person类的构造函数赋值给this.student
+    //     this.student(name,age); //js中实际上是通过对象冒充来实现继承的
+    //     delete this.student; //移除对Person的引用
+    // }
+    //
+    // var s = new Student("小明",17);
+    // s.show();
+    //
+    // var p = new Person("小花",18);
+    // p.show();
+    // 小明, 17
+    // 小花, 18
+
+    // 基本类型
+    // var a = 1;
+    // var b = a;
+    // a = 2;
+    // console.log(a, b); // 2, 1 ，a b指向不同的数据
+
+    // 引用类型指向同一份数据
+    // var a = {c: 1};
+    // var b = a;
+    // a.c = 2;
+    // console.log(a.c, b.c); // 2, 2 全是2，a b指向同一份数据
+    // var a1 = {b:
+    //             {c: {}}
+    //          };
+    // var a2 = deepClone(a1); // 浅拷贝
+    // a2.b.c === a1.b.c          // true
+    //
+    // var a3 = clone(a1);       // 深拷贝
+    // a3.b.c === a1.b.c         // false
+    let reg = /^[0-9a-zA-Z_.]{1,}$/
+    let str = 'Az1._';
+    console.log('1111111',reg.test(str))
+</script>
+</html>

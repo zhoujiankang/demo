@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layDate快速使用</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+</head>
+<body>
+
+<div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+    <input type="text" class="layui-input" id="test1" pattern="yyyy-MM-dd">
+</div>
+
+<script type="text/javascript" src="./layui/layui.js"></script>
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'laydate'], function(){
+        var layer = layui.layer,
+        form = layui.form,
+        laydate = layui.laydate;
+        layer.msg('Hello World');
+        laydate.render({
+            elem: '#test1', //指定元素
+            type: 'datetime',
+            format: 'YYYY-MM-DD',
+            change: function(value, date){ //监听日期被切换
+                // alert()
+            }
+        });
+    });
+</script>
+</body>
+</html>
